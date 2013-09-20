@@ -1,4 +1,4 @@
-alfresco-kickstarter
+alfresco+
 ====================
 
-Alfresco Kickstarter project
+Alfresco+ Project
