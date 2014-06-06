@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>Alfresco+ Dashboard</shortname>
+	<description>Alfresco Plus - Dashboard</description>
+	<url>/plus/index</url>
+	<authentication>guest</authentication>
+</webscript>

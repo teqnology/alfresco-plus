@@ -1,128 +1,144 @@
-<configuration>
+<alfresco-plus-configuration>
 
-	<!--
-		The default-search tag allows to chose the default search page.
-		Options are:
-		- advanced-search
-		- simple-search
-		- dossier-search
-	-->
-	<default-search>advanced-search</default-search>
+	<general>
+		<!--
+			The default-search tag allows to chose the default search page.
+			Options are:
+			- advanced-search
+			- simple-search
+			- dossier-search
+		-->
+		<default-search>advanced-search</default-search>
 
-	<!--	
-		The logo tag allows to change the logo on the homepage
-		The file must be in the following path:
-		Alfresco\tomcat\webapps\alfresco-plus\images
-	-->
-	<logo>logo.png</logo>
+		<!--	
+			The logo tag allows to change the logo on the homepage
+			The file must be in the following path:
+			Alfresco\tomcat\webapps\alfresco-plus\images
+		-->
+		<logo>logo.png</logo>
 
-	<!--
-		Favicon tag allows to change the favicon of the page
-		The file must be in the following path:
-		Alfresco\tomcat\webapps\alfresco-plus\images
-	-->
-	<favicon>favicon.ico</favicon>
+		<!--
+			Favicon tag allows to change the favicon of the page
+			The file must be in the following path:
+			Alfresco\tomcat\webapps\alfresco-plus\images
+		-->
+		<favicon>favicon.ico</favicon>
 
-	<!-- 
-	Page Title 
-	-->
-	<title>Alfresco Plus</title>
-
-	<!-- 
-		Model Namespace URI (you can chose different content model to expose in the UI) 
-	-->
-	<namespaces>
-		<namespace>http://www.alfresco.org/model/content/1.0</namespace>
-		<namespace>http://www.alfresco.org/model/workflow/1.0</namespace>
-	</namespaces>	
+		<!-- 
+		Page Title 
+		-->
+		<title>Alfresco Plus</title>
 	
-	<!--
-		Number of input fields for single row in the UI of the advanced and dossier search
-	-->
-	<n-input-fields>4</n-input-fields>
-
-	<!--
-		Date type fields and range for those inputs
-		If tag date-range is false the tag date-fields will not be take in consideration, if true, you must set all the date fields
-	-->
-
-	<date-range>true</date-range>
-
-	<date-fields>
-
-		<input-date>
-			<name>{http://www.alfresco.org/model/content/1.0}created</name>
-			<range>true</range>
-		</input-date>
-
-	</date-fields>
-	<!-- Properties di tipo DATA  del modello  -->
+	</general>
 	
-	<!--  Tipi considerati per la Ricerca Dossier / Smart  -->
-	<dossierfields>
-	<field>
-	<name>{http://www.alfresco.org/model/content/1.0}document</name>
-	</field>
-	</dossierfields>
-	<!--
-	Elenco delle properties del modello,
-		il tag  allfields se viene impostato a "true" vengono visualizzate tutte le properties
-		del modello,  se  impostato a "false"  vengono visualizzate solo le properties
-		impostate  con il tag _visible=true
-		i tag:  
-		search_visible=se settato a true la properties viene visualizzata nel form di ricerca  avanzata
-		result_visible=se settato a true la properties viene visualizzata come colonna nei risultati di ricerca
-		detail_visible=se settato a true la properties viene visualizzata nell'elenco delle properties del documento
-	        num_char=numero  massimo  di caratteri  nei campi  di ricerca
+	<content-model>
 		
-	-->
-	<allfields>false</allfields>
-	<!-- Lista delle properties del modello di folletto -->
-	<fields>
-	<field>
-	<name>{http://www.alfresco.org/model/content/1.0}name</name>
-	<search_visible>true</search_visible>
-	<result_visible>true</result_visible>
-	<detail_visibile>true</detail_visibile>
-	<dossier_search_visibile>false</dossier_search_visibile>
-	<dossier_result_visibile>false</dossier_result_visibile>
-	<num_char>155</num_char>
-	</field>
-	<field>
-	<name>{http://www.alfresco.org/model/content/1.0}title</name>
-	<search_visible>true</search_visible>
-	<result_visible>true</result_visible>
-	<detail_visibile>true</detail_visibile>
-	<dossier_search_visibile>true</dossier_search_visibile>
-	<dossier_result_visibile>true</dossier_result_visibile>
-	<num_char>155</num_char>
-	</field>
-	<field>
-	<name>{http://www.alfresco.org/model/content/1.0}description</name>
-	<search_visible>true</search_visible>
-	<result_visible>true</result_visible>
-	<detail_visibile>true</detail_visibile>
-	<dossier_search_visibile>true</dossier_search_visibile>
-	<dossier_result_visibile>true</dossier_result_visibile>
-	<num_char>155</num_char>
-	</field>
-	<field>
-	<name>{http://www.alfresco.org/model/content/1.0}author</name>
-	<search_visible>true</search_visible>
-	<result_visible>true</result_visible>
-	<detail_visibile>true</detail_visibile>
-	<dossier_search_visibile>true</dossier_search_visibile>
-	<dossier_result_visibile>true</dossier_result_visibile>
-	<num_char>155</num_char>
-	</field>
-	<field>
-	<name>{http://www.alfresco.org/model/content/1.0}created</name>
-	<search_visible>true</search_visible>
-	<result_visible>true</result_visible>
-	<detail_visibile>true</detail_visibile>
-	<dossier_search_visibile>true</dossier_search_visibile>
-	<dossier_result_visibile>true</dossier_result_visibile>
-	<num_char>155</num_char>
-	</field>
-	</fields>
-</configuration>
+		<!-- 
+			Model Namespace URI (you can chose different content model to expose in the UI) 
+		-->
+		<namespaces>
+			<namespace>http://www.alfresco.org/model/content/1.0</namespace>
+			<namespace>http://www.alfresco.org/model/workflow/1.0</namespace>
+		</namespaces>	
+		
+		<!--
+			Number of input fields for single row in the UI of the advanced and dossier search
+		-->
+		<n-input-fields>4</n-input-fields>
+
+		<!--
+			Date type fields and range for those inputs
+			If tag date-range is:
+			false - date-fields tag will be ignored 
+			true - date-fields and input-date tags must be completed 
+		-->
+		
+		<date-range>true</date-range>
+
+		<date-fields>
+
+			<input-date>
+				<name>{http://www.alfresco.org/model/content/1.0}created</name>
+				<range>true</range>
+			</input-date>
+
+		</date-fields>
+		
+		<!--
+			Types for dossier search
+		-->
+		<dossier-fields>
+
+			<dossier-type>
+				<name>{http://www.alfresco.org/model/content/1.0}document</name>
+			</dossier-type>
+
+		</dossier-fields>
+
+		<!--
+			Properties that will be exposed through the advanced search and the resultset
+			If all-fields is set to:
+			true - all the properties of the namespaces from the tag <namespaces> will be shown
+			false - only the properties with *_visible = true will be shown
+			Tags:  
+			advanced-search-visible = if true the property is shown in the advanced search form
+			result-visible = if true the property is shown in the resultset table
+			detail-visible = if true the property is shown in the view detail window
+	        max-num-char = limits the number of characters in the input field  
+		-->
+
+		<all-fields>false</all-fields>
+
+		<properties>
+
+			<property>
+				<name>{http://www.alfresco.org/model/content/1.0}name</name>
+				<advanced-search-visible>true</advanced-search-visible>
+				<result-visible>true</result-visible>
+				<detail-visible>true</detail-visible>
+				<dossier-search-visible>true</dossier-search-visible>
+				<dossier-result-visible>false</dossier-result-visible>
+				<max-num-char>155</max-num-char>
+			</property>
+			<property>
+				<name>{http://www.alfresco.org/model/content/1.0}title</name>
+				<advanced-search-visible>true</advanced-search-visible>
+				<result-visible>true</result-visible>
+				<detail-visible>true</detail-visible>
+				<dossier-search-visible>true</dossier-search-visible>
+				<dossier-result-visible>false</dossier-result-visible>
+				<max-num-char>155</max-num-char>
+			</property>
+			<property>
+				<name>{http://www.alfresco.org/model/content/1.0}description</name>
+				<advanced-search-visible>true</advanced-search-visible>
+				<result-visible>true</result-visible>
+				<detail-visible>true</detail-visible>
+				<dossier-search-visible>true</dossier-search-visible>
+				<dossier-result-visible>false</dossier-result-visible>
+				<max-num-char>155</max-num-char>
+			</property>
+			<property>
+				<name>{http://www.alfresco.org/model/content/1.0}author</name>
+				<advanced-search-visible>true</advanced-search-visible>
+				<result-visible>true</result-visible>
+				<detail-visible>true</detail-visible>
+				<dossier-search-visible>true</dossier-search-visible>
+				<dossier-result-visible>false</dossier-result-visible>
+				<max-num-char>155</max-num-char>
+			</property>
+			<property>
+				<name>{http://www.alfresco.org/model/content/1.0}created</name>
+				<advanced-search-visible>true</advanced-search-visible>
+				<result-visible>true</result-visible>
+				<detail-visible>true</detail-visible>
+				<dossier-search-visible>true</dossier-search-visible>
+				<dossier-result-visible>false</dossier-result-visible>
+				<max-num-char>155</max-num-char>
+			</property>
+
+		</properties>
+
+	</content-model>
+
+</alfresco-plus-configuration>
